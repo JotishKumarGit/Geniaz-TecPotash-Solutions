@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Geniaz TecPotash Solutions</title>
+    <title>Sneaky Soles</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="" name="keywords" />
     <meta content="" name="description" />
@@ -53,7 +53,79 @@
       }
     </style>
   </head>
+  <style>
+    /* Gradient Definition */
+    :root {
+      --gradient: linear-gradient(135deg, #7e0ee6, #b309b9, #0f6cb1, #1c83cd);
+    }
 
+    /* Gradient Text */
+    .gradient-text {
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: bold;
+    }
+
+    /* Card Box Styling */
+    .card-box {
+      border: 2px solid transparent;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      background-image: linear-gradient(#fff, #fff), var(--gradient);
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+    }
+
+    .card-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Card Footer */
+    .card-footer {
+      background: #fff; /* keep clean */
+      border-top: 2px solid transparent;
+      background-image: linear-gradient(#fff, #fff), var(--gradient);
+      background-origin: border-box;
+      background-clip: padding-box, border-box;
+    }
+
+    /* Gradient Button */
+    .gradient-btn {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: #fff;
+      color: #7e0ee6;
+      border: 2px solid transparent;
+      background-image: linear-gradient(#fff, #fff), var(--gradient);
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+      transition: all 0.3s ease;
+    }
+
+    .gradient-btn i {
+      color: #7e0ee6; /* default icon color */
+      transition: color 0.3s ease;
+    }
+
+    .gradient-btn:hover {
+      background: var(--gradient);
+    }
+
+    .gradient-btn:hover i {
+      color: #fff;
+    }
+  </style>
   <body>
     <!-- Spinner Start -->
     <div
@@ -90,8 +162,8 @@
       class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top px-3 py-2"
     >
       <div class="container-fluid">
-        <!-- Logo --> 
-        <a 
+        <!-- Logo -->
+        <a
           class="navbar-brand fw-bold d-flex justify-content-center align-items-center"
           href="index.html"
         >
@@ -155,9 +227,11 @@
               </span>
             </button>
             <ul class="submenu list-unstyled ps-3 d-none">
-              <li><a href="#" class="d-block py-1">About</a></li>
-              <li><a href="#" class="d-block py-1">Contact</a></li>
-              <li><a href="#" class="d-block py-1">Products</a></li>
+              <li><a href="index.html" class="d-block py-1">Home</a></li>
+              <li><a href="about.html" class="d-block py-1">About</a></li>
+              <li><a href="service.html" class="d-block py-1">Services</a></li>
+              <li><a href="product.html" class="d-block py-1">Products</a></li>
+              <li><a href="contact.html" class="d-block py-1">Contact</a></li>
             </ul>
           </li>
         </ul>
@@ -165,11 +239,16 @@
     </div>
 
     <!-- Carousel Start -->
-    <div class="container-fluid p-0 mb-5" >
+    <div class="container-fluid p-0 mb-5">
       <div class="owl-carousel header-carousel position-relative">
         <div class="owl-carousel-item position-relative">
-          <img class="img-fluid" src="img/Sports Shoes.jpg" alt="" height="1000px !important" />
-          <div   
+          <img
+            class="img-fluid"
+            src="img/shoe1.jpg"
+            alt=""
+            height="1000px !important"
+          />
+          <div
             class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
             style="background: rgba(0, 0, 0, 0.4)"
           >
@@ -178,13 +257,20 @@
                 <div class="col-10 col-lg-8">
                   <h5
                     class="text-white text-uppercase mb-3 animated slideInDown"
-                 style="color: #3058f5 !important;" >
+                    style="color: #3058f5 !important"
+                  >
                     Latest Sneaker Collection
                   </h5>
-                  <h1 class="display-3  animated slideInDown mb-4" style="color: #5333f2;">
+                  <h1
+                    class="display-3 animated slideInDown mb-4"
+                    style="color: #5333f2"
+                  >
                     Step Up Your Style with Branded Sneakers
                   </h1>
-                  <p class="fs-5 fw-medium text-white mb-4 pb-2" style="color: #bd0a8e !important;">
+                  <p
+                    class="fs-5 fw-medium text-white mb-4 pb-2"
+                    style="color: #bd0a8e !important"
+                  >
                     Discover the newest arrivals in our exclusive sneaker
                     lineup. Comfortable, stylish, and perfect for every
                     occasion.
@@ -197,7 +283,7 @@
                   </a>
                   <a
                     href="#"
-                    class="btn btn-secondary py-md-3 px-md-5 animated slideInRight"
+                    class="btn bg-light btn-secondary py-md-3 px-md-5 animated slideInRight"
                   >
                     Get Offer
                   </a>
@@ -209,9 +295,9 @@
         <div class="owl-carousel-item position-relative">
           <img
             class="img-fluid"
-            src="img/baner_snikey.png" 
+            src="img/shoe2.jpg"
             alt=""
-            style="height: 673px !important"
+            style="height: 763px !important"
           />
           <div
             class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
@@ -221,14 +307,21 @@
               <div class="row justify-content-start">
                 <div class="col-10 col-lg-8">
                   <h5
-                    class="text-white text-uppercase mb-3 animated slideInDown"  style="color: #3058f5 !important;" 
+                    class="text-white text-uppercase mb-3 animated slideInDown"
+                    style="color: #3058f5 !important"
                   >
                     Performance Sports Shoes
                   </h5>
-                  <h1 class="display-3 text-white animated slideInDown mb-4" style="color: #5333f2 !important;" >
+                  <h1
+                    class="display-3 text-white animated slideInDown mb-4"
+                    style="color: #5333f2 !important"
+                  >
                     Elevate Your Game with Top-Quality Sports Shoes
                   </h1>
-                  <p class="fs-5 fw-medium text-white mb-4 pb-2" style="color: #bd0a8e !important;">
+                  <p
+                    class="fs-5 fw-medium text-white mb-4 pb-2"
+                    style="color: black !important"
+                  >
                     Experience unmatched comfort and durability with our latest
                     range of sports shoes designed for athletes and enthusiasts
                     alike.
@@ -241,7 +334,7 @@
                   </a>
                   <a
                     href="#"
-                    class="btn btn-secondary py-md-3 px-md-5 animated slideInRight"
+                    class="btn bg-light btn-secondary py-md-3 px-md-5 animated slideInRight"
                   >
                     Get Offer
                   </a>
@@ -254,118 +347,247 @@
     </div>
     <!-- Carousel End -->
 
-    <!-- Service Start -->
+    <!-- Our Collection -->
     <div class="container-xxl py-5">
       <div class="container">
+        <!-- Section Title -->
+        <h1 class="text-center gradient-text mb-5">Our Collection</h1>
+        <h4 class="text-center mb-5" style="color: black">
+          At Sneaky Soles, we bring style and comfort together with a wide range
+          of shoes for every occasion. From everyday wear to statement pieces,
+          step up your look with our trend-forward collection.
+        </h4>
         <div class="row g-4">
+          <!-- Formal Shoes -->
           <div
             class="col-lg-4 col-md-6 service-item-top wow fadeInUp"
             data-wow-delay="0.1s"
           >
-            <div class="overflow-hidden">
-              <img
-                class="img-fluid w-100"
-                src="img/formal_shoes_2.webp"
-                alt=""
-              />
-            </div>
-            <div
-              class="d-flex align-items-center justify-content-between bg-light p-4"
-            >
-              <h5 class="text-truncate me-3 mb-0" style="color: #3058f5 !important;">Formal Shoes</h5>
-              <a
-                class="btn btn-square btn-outline-primary border-2 border-white flex-shrink-0"
-                href=""
-                ><i class="fa fa-arrow-right"></i
-              ></a>
+            <div class="card-box">
+              <div class="overflow-hidden">
+                <img
+                  class="img-fluid w-100"
+                  src="img/formal_shoes_2.webp"
+                  alt="Formal Shoes"
+                />
+              </div>
+              <div
+                class="card-footer d-flex align-items-center justify-content-between p-4"
+              >
+                <h5 class="gradient-text text-truncate me-3 mb-0">
+                  Formal Shoes
+                </h5>
+                <a class="btn btn-square gradient-btn flex-shrink-0" href="">
+                  <i class="fa fa-arrow-right"></i>
+                </a>
+              </div>
             </div>
           </div>
+
+          <!-- Sports Shoes -->
+          <div
+            class="col-lg-4 col-md-6 service-item-top wow fadeInUp"
+            data-wow-delay="0.2s"
+          >
+            <div class="card-box">
+              <div class="overflow-hidden">
+                <img
+                  class="img-fluid w-100"
+                  src="img/sports-shoes_1.jpg"
+                  alt="Sports Shoes"
+                />
+              </div>
+              <div
+                class="card-footer d-flex align-items-center justify-content-between p-4"
+              >
+                <h5 class="gradient-text text-truncate me-3 mb-0">
+                  Sports Shoes
+                </h5>
+                <a class="btn btn-square gradient-btn flex-shrink-0" href="">
+                  <i class="fa fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sneakers -->
           <div
             class="col-lg-4 col-md-6 service-item-top wow fadeInUp"
             data-wow-delay="0.3s"
           >
-            <div class="overflow-hidden">
-              <img
-                class="img-fluid w-100 h-100"
-                src="img/sports-shoes_1.jpg"
-                alt=""
-              />
-            </div>
-            <div
-              class="d-flex align-items-center justify-content-between bg-light p-4"
-            >
-              <h5 class="text-truncate me-3 mb-0" style="color: #3058f5 !important;">Sports Shoes</h5>
-              <a
-                class="btn btn-square btn-outline-primary border-2 border-white flex-shrink-0"
-                href=""
-                ><i class="fa fa-arrow-right"></i
-              ></a>
+            <div class="card-box">
+              <div class="overflow-hidden">
+                <img
+                  class="img-fluid w-100"
+                  src="img/sneakers.jpg"
+                  alt="Sneakers"
+                />
+              </div>
+              <div
+                class="card-footer d-flex align-items-center justify-content-between p-4"
+              >
+                <h5 class="gradient-text text-truncate me-3 mb-0">Sneakers</h5>
+                <a class="btn btn-square gradient-btn flex-shrink-0" href="">
+                  <i class="fa fa-arrow-right"></i>
+                </a>
+              </div>
             </div>
           </div>
+
+          <!-- Loafers -->
+          <div
+            class="col-lg-4 col-md-6 service-item-top wow fadeInUp"
+            data-wow-delay="0.4s"
+          >
+            <div class="card-box">
+              <div class="overflow-hidden">
+                <img
+                  class="img-fluid w-100"
+                  src="img/branded_shoes_1.webp"
+                  alt="Branded Shoes"
+                />
+              </div>
+              <div
+                class="card-footer d-flex align-items-center justify-content-between p-4"
+              >
+                <h5 class="gradient-text text-truncate me-3 mb-0">
+                  Branded Shoes
+                </h5>
+                <a class="btn btn-square gradient-btn flex-shrink-0" href="">
+                  <i class="fa fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Boots -->
           <div
             class="col-lg-4 col-md-6 service-item-top wow fadeInUp"
             data-wow-delay="0.5s"
           >
-            <div class="overflow-hidden">
-              <img
-                class="img-fluid w-100 h-100"
-                src="img/branded_shoes_1.webp"
-                alt=""
-              />
+            <div class="card-box">
+              <div class="overflow-hidden">
+                <img class="img-fluid w-100" src="img/boots.jpg" alt="Boots" />
+              </div>
+              <div
+                class="card-footer d-flex align-items-center justify-content-between p-4"
+              >
+                <h5 class="gradient-text text-truncate me-3 mb-0">Boots</h5>
+                <a class="btn btn-square gradient-btn flex-shrink-0" href="">
+                  <i class="fa fa-arrow-right"></i>
+                </a>
+              </div>
             </div>
-            <div
-              class="d-flex align-items-center justify-content-between bg-light p-4"
-            >
-              <h5 class="text-truncate me-3 mb-0" style="color: #3058f5 !important;">Branded Shoes</h5>
-              <a
-                class="btn btn-square btn-outline-primary border-2 border-white flex-shrink-0"
-                href=""
-                ><i class="fa fa-arrow-right"></i
-              ></a>
+          </div>
+
+          <!-- Sandals -->
+          <div
+            class="col-lg-4 col-md-6 service-item-top wow fadeInUp"
+            data-wow-delay="0.6s"
+          >
+            <div class="card-box">
+              <div class="overflow-hidden">
+                <img
+                  class="img-fluid w-100"
+                  src="img/spikeshoes.jpg"
+                  alt="spikeshoes"
+                />
+              </div>
+              <div
+                class="card-footer d-flex align-items-center justify-content-between p-4"
+              >
+                <h5 class="gradient-text text-truncate me-3 mb-0">
+                  Spikes Shoes
+                </h5>
+                <a class="btn btn-square gradient-btn flex-shrink-0" href="">
+                  <i class="fa fa-arrow-right"></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- Service End -->
+
+    <!-- collection end -->
 
     <!-- About Start -->
     <div class="container-xxl py-5">
       <div class="container">
         <div class="row g-5">
           <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="text-secondary text-uppercase" style="color: #3058f5 !important;">About Us</h6>
-            <h1 class="mb-4" style="color: #5333f2 !important;" >
+            <h6
+              class="text-uppercase"
+              style="
+                background: linear-gradient(
+                  90deg,
+                  #7e0ee6,
+                  #b309b9,
+                  #0f6cb1,
+                  #1c83cd
+                );
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+              "
+            >
+              About Us
+            </h6>
+            <h1
+              class="mb-4"
+              style="
+                background: linear-gradient(
+                  90deg,
+                  #7e0ee6,
+                  #b309b9,
+                  #0f6cb1,
+                  #1c83cd
+                );
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+              "
+            >
               Geniaz TecPotash – Trusted in Footwear And Branded Shoes
             </h1>
-            <p class="mb-4" >
+            <p class="mb-4 text-dark">
               With over a decade of innovation and dedication, Geniaz TecPotash
               Solutions has become a leading name in the branded footwear
               industry. We combine style, comfort, and durability in every pair
               to meet the evolving needs of our customers.
             </p>
-            <p class="fw-medium text-primary">
-              <i class="fa fa-check text-success me-3" style="color: #bd0a8e !important;"></i>10+ Years of Footwear
-              Excellence
+            <p class="fw-medium" style="color: #7e0ee6">
+              <i class="fa fa-check me-3" style="color: #b309b9 !important"></i>
+              10+ Years of Footwear Excellence
             </p>
-            <p class="fw-medium text-primary">
-              <i class="fa fa-check text-success me-3" style="color: #bd0a8e !important;"></i>Premium Branded Shoes
-              for All Ages
+            <p class="fw-medium" style="color: #0f6cb1">
+              <i class="fa fa-check me-3" style="color: #b309b9 !important"></i>
+              Premium Branded Shoes for All Ages
             </p>
-            <p class="fw-medium text-primary">
-              <i class="fa fa-check text-success me-3" style="color: #bd0a8e !important;"></i>Stylish, Comfortable
-              & Durable Designs
+            <p class="fw-medium" style="color: #1c83cd">
+              <i class="fa fa-check me-3" style="color: #b309b9 !important"></i>
+              Stylish, Comfortable & Durable Designs
             </p>
-            <div class="bg-primary d-flex align-items-center p-4 mt-5">
+            <div
+              class="d-flex align-items-center p-4 mt-5"
+              style="
+                background: linear-gradient(
+                  90deg,
+                  #7e0ee6,
+                  #b309b9,
+                  #0f6cb1,
+                  #1c83cd
+                );
+                border-radius: 10px;
+              "
+            >
               <div
                 class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white"
-                style="width: 60px; height: 60px"
+                style="width: 60px; height: 60px; border-radius: 50%"
               >
-                <i class="fa fa-phone-alt fa-2x text-primary"></i>
+                <i class="fa fa-phone-alt fa-2x" style="color: #7e0ee6"></i>
               </div>
               <div class="ms-3">
                 <p class="fs-5 fw-medium mb-2 text-white">Customer Support</p>
-                <h3 class="m-0 text-secondary">+91 9980115336</h3>
+                <h3 class="m-0 text-white">+91 9980115336</h3>
               </div>
             </div>
           </div>
@@ -377,13 +599,17 @@
               <img
                 class="position-absolute img-fluid w-100 h-100"
                 src="img/branded_shoes_1.webp"
-                style="object-fit: cover; padding: 0 0 50px 100px"
+                style="
+                  object-fit: cover;
+                  padding: 0 0 50px 100px;
+                  border-radius: 10px;
+                "
                 alt="Branded Shoes Showcase"
               />
               <img
                 class="position-absolute start-0 bottom-0 img-fluid bg-white pt-2 pe-2 w-50 h-50"
                 src="img/sports-shoes_1.jpg"
-                style="object-fit: cover"
+                style="object-fit: cover; border-radius: 10px"
                 alt="Geniaz Shoe Detail"
               />
             </div>
@@ -391,133 +617,341 @@
         </div>
       </div>
     </div>
+
     <!-- About End -->
 
     <!-- Products Start -->
     <div class="container-xxl py-5">
       <div class="container">
-        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-          <h6 class="text-secondary text-uppercase">
-            Top Shelf Sneakers. Zero Compromise.
-          </h6>
-          <h1 class="mb-5">Authentic Sneakers from the Brands You Love</h1>
-        </div>
-        <div class="row g-4 justify-content-center">
-          <!-- Nike -->
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="team-item text-center">
-              <div class="position-relative overflow-hidden mb-3">
+        <!-- Section Title -->
+        <h1 class="text-center gradient-text mb-5">Our Products</h1>
+
+        <div class="row g-4">
+          <!-- Formal Shoes -->
+          <div
+            class="col-lg-4 col-md-6 service-item-top wow fadeInUp"
+            data-wow-delay="0.1s"
+          >
+            <div class="card-box">
+              <!-- Card Image -->
+              <div class="overflow-hidden">
                 <img
-                  class="img-fluid"
-                  src="img/nike-shoe.jpg"
-                  alt="Nike Shoes"
-                  style="height: 200px; width: auto"
+                  class="img-fluid w-100"
+                  src="img/nikesingle.jpeg"
+                  alt="Formal Shoes"
+                  style="object-fit: cover"
                 />
               </div>
-              <div class="team-text">
-                <div class="bg-light p-3">
-                  <h5 class="fw-bold mb-1">Nike</h5>
-                  <small>Engineered for Performance</small>
+
+              <!-- Card Footer -->
+              <div
+                class="card-footer d-flex flex-column align-items-center justify-content-between p-4"
+              >
+                <!-- Card Title -->
+                <h5 class="gradient-text text-truncate me-3 mb-0">Nike</h5>
+
+                <!-- Buttons -->
+                <div class="d-flex gap-5 mt-2">
+                  <a
+                    href="#"
+                    class="px-3 py-3"
+                    style="
+                      border: 2px solid transparent;
+                      border-radius: 8px;
+                      background-image: linear-gradient(#fff, #fff),
+                        var(--gradient);
+                      background-origin: border-box;
+                      background-clip: padding-box, border-box;
+                      color: black;
+                      text-decoration: none;
+                    "
+                    >Enquiry</a
+                  >
+
+                  <a
+                    href="nike.html"
+                    class="px-3 py-3"
+                    style="
+                      border: 2px solid transparent;
+                      border-radius: 8px;
+                      background-image: linear-gradient(#fff, #fff),
+                        var(--gradient);
+                      background-origin: border-box;
+                      background-clip: padding-box, border-box;
+                      color: black;
+                      text-decoration: none;
+                    "
+                    >Details</a
+                  >
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Adidas -->
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-            <div class="team-item text-center">
-              <div class="position-relative overflow-hidden mb-3">
+          <!-- Sports Shoes -->
+          <div
+            class="col-lg-4 col-md-6 service-item-top wow fadeInUp"
+            data-wow-delay="0.2s"
+          >
+            <div class="card-box">
+              <div class="overflow-hidden">
                 <img
-                  class="img-fluid"
-                  src="img/adidas-shoe.jpg"
-                  alt="Adidas Shoes"
-                  style="height: 200px; width: auto"
+                  class="img-fluid w-100"
+                  src="img/sports-shoes_1.jpg"
+                  alt="Asics"
                 />
               </div>
-              <div class="team-text">
-                <div class="bg-light p-3">
-                  <h5 class="fw-bold mb-1">Adidas</h5>
-                  <small>Style Meets Innovation</small>
+              <div
+                class="card-footer d-flex flex-column align-items-center justify-content-between p-4"
+              >
+                <h5 class="gradient-text text-truncate me-3 mb-0">Asics</h5>
+                <div class="d-flex gap-5 mt-2">
+                  <a
+                    href="#"
+                    class="px-3 py-3"
+                    style="
+                      border: 2px solid transparent;
+                      border-radius: 8px;
+                      background-image: linear-gradient(#fff, #fff),
+                        var(--gradient);
+                      background-origin: border-box;
+                      background-clip: padding-box, border-box;
+                      color: black;
+                      text-decoration: none;
+                    "
+                    >Enquiry</a
+                  >
+                  <a
+                    href="Asics.html"
+                    class="px-3 py-3"
+                    style="
+                      border: 2px solid transparent;
+                      border-radius: 8px;
+                      background-image: linear-gradient(#fff, #fff),
+                        var(--gradient);
+                      background-origin: border-box;
+                      background-clip: padding-box, border-box;
+                      color: black;
+                      text-decoration: none;
+                    "
+                    >Details</a
+                  >
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Puma -->
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-            <div class="team-item text-center">
-              <div class="position-relative overflow-hidden mb-3">
+          <!-- Sneakers -->
+          <div
+            class="col-lg-4 col-md-6 service-item-top wow fadeInUp"
+            data-wow-delay="0.3s"
+          >
+            <div class="card-box">
+              <div class="overflow-hidden">
                 <img
-                  class="img-fluid"
+                  class="img-fluid w-100"
+                  src="img/sneakers.jpg"
+                  alt="Adidas"
+                />
+              </div>
+              <div
+                class="card-footer d-flex flex-column align-items-center justify-content-between p-4"
+              >
+                <h5 class="gradient-text text-truncate me-3 mb-0">Adidas</h5>
+                <div class="d-flex gap-5 mt-2">
+                  <a
+                    href="#"
+                    class="px-3 py-3"
+                    style="
+                      border: 2px solid transparent;
+                      border-radius: 8px;
+                      background-image: linear-gradient(#fff, #fff),
+                        var(--gradient);
+                      background-origin: border-box;
+                      background-clip: padding-box, border-box;
+                      color: black;
+                      text-decoration: none;
+                    "
+                    >Enquiry</a
+                  >
+                  <a
+                    href="adidas.html"
+                    class="px-3 py-3"
+                    style="
+                      border: 2px solid transparent;
+                      border-radius: 8px;
+                      background-image: linear-gradient(#fff, #fff),
+                        var(--gradient);
+                      background-origin: border-box;
+                      background-clip: padding-box, border-box;
+                      color: black;
+                      text-decoration: none;
+                    "
+                    >Details</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Branded Shoes -->
+          <div
+            class="col-lg-4 col-md-6 service-item-top wow fadeInUp"
+            data-wow-delay="0.4s"
+          >
+            <div class="card-box">
+              <div class="overflow-hidden">
+                <img
+                  class="img-fluid w-100"
                   src="img/puma-shoe.jpg"
-                  alt="Puma Shoes"
-                  style="height: 200px; width: auto"
+                  alt="Branded Shoes"
                 />
               </div>
-              <div class="team-text">
-                <div class="bg-light p-3">
-                  <h5 class="fw-bold mb-1">Puma</h5>
-                  <small>Sporty & Street-Ready</small>
+              <div
+                class="card-footer d-flex flex-column align-items-center justify-content-between p-4"
+              >
+                <h5 class="gradient-text text-truncate me-3 mb-0">
+                  Puma Shoes
+                </h5>
+                <div class="d-flex gap-5 mt-2">
+                  <a
+                    href="#"
+                    class="px-3 py-3"
+                    style="
+                      border: 2px solid transparent;
+                      border-radius: 8px;
+                      background-image: linear-gradient(#fff, #fff),
+                        var(--gradient);
+                      background-origin: border-box;
+                      background-clip: padding-box, border-box;
+                      color: black;
+                      text-decoration: none;
+                    "
+                    >Enquiry</a
+                  >
+                  <a
+                    href="puma.html"
+                    class="px-3 py-3"
+                    style="
+                      border: 2px solid transparent;
+                      border-radius: 8px;
+                      background-image: linear-gradient(#fff, #fff),
+                        var(--gradient);
+                      background-origin: border-box;
+                      background-clip: padding-box, border-box;
+                      color: black;
+                      text-decoration: none;
+                    "
+                    >Details</a
+                  >
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Reebok -->
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-            <div class="team-item text-center">
-              <div class="position-relative overflow-hidden mb-3">
+          <!-- Boots -->
+          <div
+            class="col-lg-4 col-md-6 service-item-top wow fadeInUp"
+            data-wow-delay="0.5s"
+          >
+            <div class="card-box">
+              <div class="overflow-hidden">
                 <img
-                  class="img-fluid"
-                  src="img/reebok-shoe.jpg"
-                  alt="Reebok Shoes"
-                  style="height: 200px; width: auto"
-                />
-              </div>
-              <div class="team-text">
-                <div class="bg-light p-3">
-                  <h5 class="fw-bold mb-1">Reebok</h5>
-                  <small>Classic Meets Contemporary</small>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Asics -->
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="team-item text-center">
-              <div class="position-relative overflow-hidden mb-3">
-                <img
-                  class="img-fluid"
-                  src="img/asics-shoe.jpg"
-                  alt="Asics Shoes"
-                  style="height: 200px; width: auto"
-                />
-              </div>
-              <div class="team-text">
-                <div class="bg-light p-3">
-                  <h5 class="fw-bold mb-1">Asics</h5>
-                  <small>Built for Runners</small>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Crocs -->
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-            <div class="team-item text-center">
-              <div class="position-relative overflow-hidden mb-3">
-                <img
-                  class="img-fluid"
+                  class="img-fluid w-100"
                   src="img/crocs-shoe.webp"
-                  alt="Crocs Footwear"
-                  style="height: 200px; width: auto"
+                  alt="Crocs"
                 />
               </div>
-              <div class="team-text">
-                <div class="bg-light p-3">
-                  <h5 class="fw-bold mb-1">Crocs</h5>
-                  <small>Comfort Like No Other</small>
+              <div
+                class="card-footer d-flex flex-column align-items-center justify-content-between p-4"
+              >
+                <h5 class="gradient-text text-truncate me-3 mb-0">Crocs</h5>
+                <div class="d-flex gap-5 mt-2">
+                  <a
+                    href="#"
+                    class="px-3 py-3"
+                    style="
+                      border: 2px solid transparent;
+                      border-radius: 8px;
+                      background-image: linear-gradient(#fff, #fff),
+                        var(--gradient);
+                      background-origin: border-box;
+                      background-clip: padding-box, border-box;
+                      color: black;
+                      text-decoration: none;
+                    "
+                    >Enquiry</a
+                  >
+                  <a
+                    href="crocs.html"
+                    class="px-3 py-3"
+                    style="
+                      border: 2px solid transparent;
+                      border-radius: 8px;
+                      background-image: linear-gradient(#fff, #fff),
+                        var(--gradient);
+                      background-origin: border-box;
+                      background-clip: padding-box, border-box;
+                      color: black;
+                      text-decoration: none;
+                    "
+                    >Details</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Spikes Shoes -->
+          <div
+            class="col-lg-4 col-md-6 service-item-top wow fadeInUp"
+            data-wow-delay="0.6s"
+          >
+            <div class="card-box">
+              <div class="overflow-hidden">
+                <img
+                  class="img-fluid w-100"
+                  src="img/spikeshoes.jpg"
+                  alt="Spikes Shoes"
+                />
+              </div>
+              <div
+                class="card-footer d-flex flex-column align-items-center justify-content-between p-4"
+              >
+                <h5 class="gradient-text text-truncate me-3 mb-0">
+                  Spikes Shoes
+                </h5>
+                <div class="d-flex gap-5 mt-2">
+                  <a
+                    href="#"
+                    class="px-3 py-3"
+                    style="
+                      border: 2px solid transparent;
+                      border-radius: 8px;
+                      background-image: linear-gradient(#fff, #fff),
+                        var(--gradient);
+                      background-origin: border-box;
+                      background-clip: padding-box, border-box;
+                      color: black;
+                      text-decoration: none;
+                    "
+                    >Enquiry</a
+                  >
+                  <a
+                    href="spikes.html"
+                    class="px-3 py-3"
+                    style="
+                      border: 2px solid transparent;
+                      border-radius: 8px;
+                      background-image: linear-gradient(#fff, #fff),
+                        var(--gradient);
+                      background-origin: border-box;
+                      background-clip: padding-box, border-box;
+                      color: black;
+                      text-decoration: none;
+                    "
+                    >Details</a
+                  >
                 </div>
               </div>
             </div>
@@ -525,6 +959,7 @@
         </div>
       </div>
     </div>
+
     <!--   Products End -->
 
     <!-- Fact Start -->
@@ -573,7 +1008,8 @@
       <div class="row g-0">
         <div class="col-lg-3 d-none d-lg-flex">
           <div
-            class="d-flex align-items-center justify-content-center bg-primary w-100 h-100"
+            class="d-flex align-items-center justify-content-center w-100 h-100"
+            style="background: linear-gradient(90deg, #8e2de2, #4a00e0)"
           >
             <h1
               class="display-3 text-white m-0"
@@ -583,14 +1019,45 @@
             </h1>
           </div>
         </div>
+
         <div class="col-md-12 col-lg-9">
           <div class="ms-lg-5 ps-lg-5">
             <div
               class="text-center text-lg-start wow fadeInUp"
               data-wow-delay="0.1s"
             >
-              <h6 class="text-secondary text-uppercase">Our Services</h6>
-              <h1 class="mb-5">Explore Our Shoe Offerings</h1>
+              <h6
+                class="text-secondary text-uppercase"
+                style="
+                  background: linear-gradient(
+                    90deg,
+                    #7e0ee6,
+                    #b309b9,
+                    #0f6cb1,
+                    #1c83cd
+                  );
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                "
+              >
+                Our Services
+              </h6>
+              <h1
+                class="mb-5"
+                style="
+                  background: linear-gradient(
+                    90deg,
+                    #7e0ee6,
+                    #b309b9,
+                    #0f6cb1,
+                    #1c83cd
+                  );
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                "
+              >
+                Explore Our Shoe Offerings
+              </h1>
             </div>
             <div
               class="owl-carousel service-carousel position-relative wow fadeInUp"
@@ -715,128 +1182,39 @@
     </div>
     <!-- Service End -->
 
-    <!-- Booking Start  -->
-    <div class="container-fluid my-5 px-0">
-      <div class="video wow fadeInUp" data-wow-delay="0.1s">
-        <button
-          type="button"
-          class="btn-play"
-          data-bs-toggle="modal"
-          data-src="youtube link"
-          data-bs-target="#videoModal"
-        >
-          <span></span>
-        </button>
-
-        <div
-          class="modal fade"
-          id="videoModal"
-          tabindex="-1"
-          aria-labelledby="exampleModalLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog">
-            <div class="modal-content rounded-0">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">
-                  Youtube Video
-                </h5>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="modal-body">
-                <div class="ratio ratio-16x9">
-                  <iframe
-                    class="embed-responsive-item"
-                    src=""
-                    id="video"
-                    allowfullscreen
-                    allowscriptaccess="always"
-                    allow="autoplay"
-                  ></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <h1 class="text-white mb-4">Step Into Style with Our Latest Shoes</h1>
-        <h3 class="text-white mb-0">
-          Trendy. Comfortable. Available 24/7 Online.
-        </h3>
-      </div>
-      <div
-        class="container position-relative wow fadeInUp"
-        data-wow-delay="0.1s"
-        style="margin-top: -6rem"
-      >
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <div class="bg-light text-center p-5">
-              <h1 class="mb-4">Book For A Service</h1>
-              <form>
-                <div class="row g-3">
-                  <div class="col-12 col-sm-6">
-                    <input
-                      type="text"
-                      class="form-control border-0"
-                      placeholder="Your Name"
-                      style="height: 55px"
-                    />
-                  </div>
-                  <div class="col-12 col-sm-6">
-                    <input
-                      type="email"
-                      class="form-control border-0"
-                      placeholder="Your Email"
-                      style="height: 55px"
-                    />
-                  </div>
-                  <div class="col-12 col-sm-6">
-                    <select class="form-select border-0" style="height: 55px">
-                      <option selected>Select A Service</option>
-                      <option value="1">Branded Shoes</option>
-                      <option value="2">Sports Shoes</option>
-                      <option value="3">Formal Shoes</option>
-                    </select>
-                  </div>
-                  <div class="col-12 col-sm-6">
-                    <div class="date" id="date1" data-target-input="nearest">
-                      <input
-                        type="text"
-                        class="form-control border-0 datetimepicker-input"
-                        placeholder="Service Date"
-                        data-target="#date1"
-                        data-toggle="datetimepicker"
-                        style="height: 55px"
-                      />
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <textarea
-                      class="form-control border-0"
-                      placeholder="Special Request"
-                    ></textarea>
-                  </div>
-                  <div class="col-12">
-                    <button class="btn btn-primary w-100 py-3" type="submit">
-                      Enquery Now
-                    </button>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--  Booking End -->
-
     <!-- Testimonial Start -->
+    <style>
+      :root {
+        --gradient: linear-gradient(135deg, #7e0ee6, #b309b9, #0f6cb1, #1c83cd);
+      }
+
+      .testimonial-text {
+        background: var(--gradient);
+        color: #fff;
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+
+      .testimonial-item h5 {
+        background: var(--gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bold;
+      }
+
+      .testimonial-item p.m-0 {
+        color: #0f6cb1; /* Slightly darker text for role */
+      }
+
+      .testimonial-item img {
+        border: 3px solid transparent;
+        background-image: linear-gradient(#fff, #fff), var(--gradient);
+        background-origin: border-box;
+        background-clip: padding-box, border-box;
+      }
+    </style>
+
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
       <div class="container">
         <div class="text-center">
@@ -849,7 +1227,7 @@
         >
           <!-- Testimonial 1 -->
           <div class="testimonial-item text-center">
-            <div class="testimonial-text bg-light text-center p-4 mb-4">
+            <div class="testimonial-text text-center p-4 mb-4">
               <p class="mb-0">
                 Absolutely love my new Nike sneakers! 100% authentic and super
                 comfortable. Shipping was fast and the packaging was premium.
@@ -874,7 +1252,7 @@
 
           <!-- Testimonial 2 -->
           <div class="testimonial-item text-center">
-            <div class="testimonial-text bg-light text-center p-4 mb-4">
+            <div class="testimonial-text text-center p-4 mb-4">
               <p class="mb-0">
                 I ordered a pair of Adidas Ultraboosts and they are the real
                 deal! These are original sneakers at unbeatable prices. Great
@@ -899,7 +1277,7 @@
 
           <!-- Testimonial 3 -->
           <div class="testimonial-item text-center">
-            <div class="testimonial-text bg-light text-center p-4 mb-4">
+            <div class="testimonial-text text-center p-4 mb-4">
               <p class="mb-0">
                 My Reebok Classics are exactly what I wanted—authentic, stylish,
                 and comfortable. This store only sells genuine branded shoes, no
@@ -924,7 +1302,7 @@
 
           <!-- Testimonial 4 -->
           <div class="testimonial-item text-center">
-            <div class="testimonial-text bg-light text-center p-4 mb-4">
+            <div class="testimonial-text text-center p-4 mb-4">
               <p class="mb-0">
                 I’ve been wearing Asics for years, and I’m so glad I found this
                 store. They had the exact model I wanted—original, and at a
@@ -949,7 +1327,7 @@
 
           <!-- Testimonial 5 -->
           <div class="testimonial-item text-center">
-            <div class="testimonial-text bg-light text-center p-4 mb-4">
+            <div class="testimonial-text text-center p-4 mb-4">
               <p class="mb-0">
                 Just got my Crocs and wow—they're so comfy! The product was
                 original and arrived quickly. Perfect for everyday wear.
@@ -973,6 +1351,7 @@
         </div>
       </div>
     </div>
+
     <!--  Testimonial End -->
 
     <!-- Contact Start -->
@@ -1046,7 +1425,10 @@
                     </div>
                   </div>
                   <div class="col-12">
-                    <button class="btn btn-primary w-100 py-3" type="submit">
+                    <button
+                      class="btn bg-primary btn-primary w-100 py-3"
+                      type="submit"
+                    >
                       Send Message
                     </button>
                   </div>
@@ -1135,8 +1517,8 @@
           <div class="row">
             <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
               &copy;
-              <a class="border-bottom" href="#">Geniaz TecPotash Solutions</a>,
-              All Right Reserved.
+              <a class="border-bottom" href="#">Sneaky Soles</a>, All Right
+              Reserved.
             </div>
             <div class="col-md-6 text-center text-md-end">
               <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
