@@ -1,6 +1,5 @@
 /********** Template CSS **********/
 
-
 .fw-medium {
   font-weight: 600 !important;
 }
@@ -232,7 +231,7 @@
 
 .page-header {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(../img/bg.jpg) center center no-repeat;
+    url(../img/nike-shoe.jpg) center center no-repeat;
   background-size: cover;
 }
 
@@ -476,7 +475,7 @@
 }
 
 .testimonial-carousel .owl-item.center .testimonial-text * {
-  color: #ffffff !important;
+  color: black !important;
 }
 
 .testimonial-carousel .owl-item .testimonial-text::after {
